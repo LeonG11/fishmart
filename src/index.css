@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    font-family: 'Ubuntu';
+}
+
+.hoverb{
+    transition: .2s;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.hoverb:hover{
+    margin-top: -20px;
+}
+
+.moveTop{
+    transition: .3s;
+}
+
+.moveTop:hover{
+    margin-top: -10px;
+}
