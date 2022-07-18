@@ -1,5 +1,4 @@
 import React from 'react';
-import products from './Menu'
 
 export default function Products(child) {
     return (
