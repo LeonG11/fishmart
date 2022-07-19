@@ -1,37 +1,25 @@
-import React from "react";
+import React from 'react';
+import {ButtonArrow} from "./ButtonArrow";
+import {Link} from "react-router-dom";
 
-export default function Body() {
-    const mainText = {
-        fontWeight: "700",
-        lineHeight: "73.54px",
-        position: "absolute",
-        height: "208px",
-        left: "60px",
-        top: "260px",
-    };
+const Body = () => {
     return (
-        <div
-            className="w-full h-[910px]"
-            style={{
-                backgroundImage: "url(/img/Background.jpg)",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "100%",
-            }}
-        >
-            <div className="mx-16 py-[150px]"></div>
-            <div className="text-[64px] text-white" style={mainText}>
-                <div className="animate__animated animate__fadeInLeftBig">
-          <div className="mb-4">
-            Свежие морепродукты <br /> на любой вкус
-          </div>
-          <div className="text-2xl font-medium px-10 flex">
-            Смотреть ассортимент
-            <div className="pt-2"></div>
-            <img alt="тык" className="z-10 ml-10" src="/img/arrow next.svg" />
-            <div className="bg-orange-400 w-10 -ml-7 h-10 rounded-full zb"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+        <>
+            <div className="pl-[60px] pr-[60px] grid-cols-12 text-white flex flex-col h-[100vh]" style={{
+                backgroundImage: 'url("./img/Background.jpg")',
+                backgroundSize: 'contain'
+            }}>
+                <div
+                    className="pt-[150px] font-bold text-white font-bold text-[64px] leading-[84px] col-start-1 col-end-8 animate__animated animate__fadeInLeft">
+                    Cвежие морепродукты <br/> на любой вкус
+                </div>
+                <Link to="/menu" className="animate__animated animate__fadeInLeft">
+                    <ButtonArrow fontSize="26px" marginTop="25px" marginLeft="46px" fontWeight="500"
+                                 name="Смотреть ассортимент"/>
+                </Link>
+            </div>
+        </>
+    );
+};
+
+export default Body;
