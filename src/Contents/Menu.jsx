@@ -155,11 +155,11 @@ export default function Menu() {
                     </div>
                 </div>
                 <div className="grid grid-cols-3 gap-5 mt-[60px]">
-                    {category == "" ? map : productArray.filter(n => n.category == category).map(n => <Cards src={n.src}
-                                                                                                             name={n.name}
-                                                                                                             divider={n.divider}
-                                                                                                             place={n.place}
-                                                                                                             price={n.price}/>)}
+                    {category === "" ? map : productArray.filter(n => n.category === category).map(n => <Cards src={n.src}
+                                                                                                               name={n.name}
+                                                                                                               divider={n.divider}
+                                                                                                               place={n.place}
+                                                                                                               price={n.price}/>)}
                 </div>
             </div>
             <Footer/>

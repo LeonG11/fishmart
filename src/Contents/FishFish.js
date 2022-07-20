@@ -17,7 +17,7 @@ const FishFish = () => {
                     Качество продукции для нас превыше всего!
                 </div>
                 <div className="row-start-1 row-end-3 col-start-8 col-end-13 mt-[130px] pb-[50vh]">
-                    <img src="./img/fishfish.svg"/>
+                    <img src="./img/fishfish.svg" alt="logo"/>
                 </div>
             </div>
             <Footer/>
