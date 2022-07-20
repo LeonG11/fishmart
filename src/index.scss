@@ -4,7 +4,7 @@
 $shrift: Ubuntu;
 
 * {
-  font-family: $shrift;
+  font-family: Ubuntu, "Roboto Light", sans-serif, Ariala;
 }
 
 .fm {
@@ -63,9 +63,9 @@ $shrift: Ubuntu;
 
 }
 
-.icon{
+.icon {
   width: 24px;
-  height:24px;
+  height: 24px;
 }
 
 .burger {
@@ -76,6 +76,7 @@ $shrift: Ubuntu;
   display: flex;
   flex-direction: column;
   transition: .5s;
+  border-radius: 50%;
 
   &:hover {
     background-color: #898686;
@@ -99,8 +100,19 @@ $shrift: Ubuntu;
   background-color: #051B26;
   width: 25%;
   font-size: 14px;
-  &__mobile{
+
+  &__mobile {
     width: 25%;
+  }
+}
+
+.menu {
+  padding: 20px;
+
+  &__button {
+    margin-top: 10px;
+    transition: .5s;
+
   }
 }
 

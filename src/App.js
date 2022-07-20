@@ -1,27 +1,15 @@
-import {useMediaQuery} from "react-responsive";
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Top from "./Contents/Top";
 import Body from "./Contents/Body";
 import FishFish from "./Contents/FishFish";
-import Menu from "./Contents/Menu";
+import Shop from "./Contents/Shop";
 import About from "./Contents/About";
 import Auth from "./Contents/Auth";
 import React from 'react'
 
 
 function App() {
-    const isDesktop = useMediaQuery({
-        query: "(min-width:1224px)"
-    });
-    const isTablet = useMediaQuery({
-        query: "(max-width:1224px)"
-    });
-    const isMobile = useMediaQuery({
-        query: "(max-width:768px)"
-    });
-    const isPortrait = useMediaQuery({
-        query: "(orientation:portrait)"
-    });
+
 
     return (
         <Router>
@@ -29,7 +17,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Body/>}/>
                 <Route path="/fishfish" element={<FishFish/>}/>
-                <Route path="/menu" element={<Menu/>}/>
+                <Route path="/menu" element={<Shop/>}/>
                 <Route path="/contents" element={<About/>}/>
                 <Route path='/auth' element={<Auth/>}/>
             </Routes>

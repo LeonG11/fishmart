@@ -1,28 +1,61 @@
 import MediaQuery from "react-responsive";
 import {Link} from "react-router-dom";
-import React from "react";
+import React, {useState} from "react";
 
 export function MobileNav() {
+
+    const [open, setOpen] = useState(false);
+
+
+    const invertOpen = () => {
+        if (open) {
+            setOpen(false)
+        } else {
+            setOpen(true)
+
+        }
+    }
+
+
     return <MediaQuery maxWidth={768}>
         <div className="header__block">
-            <div hidden={false} className="burger__menu__mobile">
+            {/*<Menu>*/}
+            {/*    <a className=>1</a>*/}
+            {/*    <a className=>2</a>*/}
+            {/*    <a className=>3</a>*/}
+            {/*    <a className=>4</a>*/}
+            {/*    <a className=>5</a>*/}
+            {/*</Menu>*/}
+            <div className="z-10 absolute menu" hidden={open} style={{
+                backgroundColor: '#051B26',
+                width: '25%',
+                height: '100vh',
+                top: '0',
+                marginLeft: '-20px',
+                textAlign: 'left'
+            }}>
+                <button style={{
+                    alignSelf: 'end'
+                }} onClick={invertOpen}>
+                    X
+                </button>
                 <Link to="/fishfish">
-                    <div>
+                    <div className="menu__button">
                         FISH FISH
                     </div>
                 </Link>
                 <Link to="/menu">
-                    <div>
+                    <div className="menu__button">
                         АССОРТИМЕНТ
                     </div>
                 </Link>
                 <Link to="/about">
-                    <div>
+                    <div className="menu__button">
                         КОНТАКТЫ
                     </div>
                 </Link>
             </div>
-            <button className="burger">
+            <button className="burger" onClick={invertOpen}>
                 <div></div>
                 <div></div>
                 <div></div>
