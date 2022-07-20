@@ -3,12 +3,12 @@ import {ButtonArrow} from "./ButtonArrow";
 import {Link} from "react-router-dom";
 
 const Body = () => {
+
+    document.body.style.background = 'url("./img/Background.jpg") no-repeat center center'
+    document.body.style.backgroundSize = "cover"
     return (
         <>
-            <div className="pl-[60px] pr-[60px] grid-cols-12 text-white flex flex-col h-[100vh]" style={{
-                backgroundImage: 'url("./img/Background.jpg")',
-                backgroundSize: 'contain'
-            }}>
+            <div className="pl-[60px] pr-[60px] grid-cols-12 text-white flex flex-col h-[100vh]">
                 <div
                     className="pt-[150px] font-bold text-white font-bold text-[64px] leading-[84px] col-start-1 col-end-8 animate__animated animate__fadeInLeft">
                     Cвежие морепродукты <br/> на любой вкус
