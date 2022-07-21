@@ -69,6 +69,8 @@ $shrift: Ubuntu;
 }
 
 .burger {
+  left: 5%;
+  position: absolute;
   width: 30px;
   height: 30px;
   align-items: center;
@@ -93,6 +95,16 @@ $shrift: Ubuntu;
     border-radius: 1px;
     margin-top: 2px;
     transition: .5s;
+  }
+}
+
+.ul_burger {
+  li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  li:first-child {
+    padding-top: 60px;
   }
 }
 
@@ -132,14 +144,8 @@ $shrift: Ubuntu;
     padding-right: 20px;
     display: flex;
     flex-direction: row;
-
-    &__container {
-      margin-left: 34%;
-
-      img {
-        margin-left: 10%;
-      }
-    }
+    justify-content: center;
+    color: #B78A61;
   }
 }
 
