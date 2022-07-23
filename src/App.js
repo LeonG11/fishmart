@@ -7,10 +7,7 @@ import About from "./Contents/About";
 import Auth from "./Contents/Auth";
 import React from 'react'
 
-
 function App() {
-
-
     return (
         <Router>
             <Top/>
