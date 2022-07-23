@@ -127,7 +127,7 @@ export default function Shop() {
                 paddingRight: '60px',
                 paddingLeft: '60px'
             }}>
-                <div className="pt-[40px] grid gap-5 grid-cols-3 text-white">
+                <div className="carousel">
                     <button className="text-[40px] font-[500]" style={{
                         textAlign: 'left'
                     }} onClick={() => setCategory("")}>Ассортимент
@@ -154,7 +154,7 @@ export default function Shop() {
                         </button>
                     </div>
                 </div>
-                <div className="grid grid-cols-3 gap-5 mt-[60px]">
+                <div className="cards__grid ">
                     {category === "" ? map : productArray.filter(n => n.category === category).map(n => <Cards
                         src={n.src}
                         name={n.name}
