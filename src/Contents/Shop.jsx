@@ -114,6 +114,10 @@ const productArray = [
     },
 ]
 
+function CarouselButton(props) {
+    return <button className="carousel__button__category" onClick={props.onClick}>{props.name.toUpperCase()}</button>;
+}
+
 export default function Shop() {
     const [category, setCategory] = useState("");
 
@@ -122,40 +126,22 @@ export default function Shop() {
                                              price={n.price}/>);
     return (
         <>
-            <div style={{
-                backgroundColor: "#051B26",
-                paddingRight: '60px',
-                paddingLeft: '60px'
-            }}>
+            <div className="carousel__grid">
                 <div className="carousel">
-                    <button className="text-[40px] font-[500]" style={{
-                        textAlign: 'left'
-                    }} onClick={() => setCategory("")}>Ассортимент
+                    <button className="carousel__button" onClick={() => setCategory("")}>Ассортимент
                     </button>
-                    <div
-                        className="items-center col-start-1 col-end-4 gap-[30px] uppercase row-start-2 text-[400] font-[18px] justify-center leading-[27px] inline-flex">
-                        <button className="focus:text-white text-gray-600 duration-300"
-                                onClick={() => setCategory("Fish")}>РЫБА
-                        </button>
-                        <button className="focus:text-white text-gray-600 duration-300"
-                                onClick={() => setCategory("Crab")}>КРАБЫ
-                        </button>
-                        <button className="focus:text-white text-gray-600 duration-300"
-                                onClick={() => setCategory("Scallop")}>ГРЕБЕШКИ И МИДИИ
-                        </button>
-                        <button className="focus:text-white text-gray-600 duration-300"
-                                onClick={() => setCategory("Shrimp")}>КРЕВЕТКИ
-                        </button>
-                        <button className="focus:text-white text-gray-600 duration-300"
-                                onClick={() => setCategory("Ouster")}>УСТРИЦЫ
-                        </button>
-                        <button className="focus:text-white text-gray-600 duration-300"
-                                onClick={() => setCategory("Squid")}>КАЛЬМАРЫ
-                        </button>
+
+                    <div className="carousel__show">
+                        <CarouselButton name={"рыба"} onClick={() => setCategory("Fish")}></CarouselButton>
+                        <CarouselButton name={"крабы"} onClick={() => setCategory("Crab")}></CarouselButton>
+                        <CarouselButton name={"гребешки и мидии"} onClick={() => setCategory("Scallop")}></CarouselButton>
+                        <CarouselButton name={"креветки"} onClick={() => setCategory("Shrimp")}></CarouselButton>
+                        <CarouselButton name={"устрицы"} onClick={() => setCategory("Ouster")}></CarouselButton>
+                        <CarouselButton name={"кальмары"} onClick={() => setCategory("Squid")}></CarouselButton>
                     </div>
                 </div>
                 <div className="cards__grid ">
-                    {category === "" ? map : productArray.filter(n => n.category === category).map(n => <Cards
+                    {category === "" ? map : productArray.filter(n => n.category === category).map(n =><Cards
                         src={n.src}
                         name={n.name}
                         divider={n.divider}
