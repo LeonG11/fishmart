@@ -6,12 +6,14 @@ import Shop from "./Contents/Shop";
 import About from "./Contents/About";
 import Auth from "./Contents/Auth";
 import React from 'react'
+import BurgerMenu from "./Components/BurgerMenu";
+
 
 function App() {
     return (
         <Router>
+            <BurgerMenu/>
             <Top/>
-
             <Routes>
                 <Route path="/" element={<Body/>}/>
                 <Route path="/fishfish" element={<FishFish/>}/>

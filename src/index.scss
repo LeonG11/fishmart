@@ -39,11 +39,12 @@ $shrift: Ubuntu;
 
 
 .header__block__container {
+  display: block;
 
   img {
     width: 55px;
     height: 60px;
-    margin-left: 6.4%;
+    margin: auto;
   }
 
   div {
@@ -95,26 +96,6 @@ $shrift: Ubuntu;
     border-radius: 1px;
     margin-top: 2px;
     transition: .5s;
-  }
-}
-
-.ul_burger {
-  li:not(:last-child) {
-    margin-bottom: 8px;
-  }
-
-  li:first-child {
-    padding-top: 60px;
-  }
-}
-
-.burger__menu {
-  background-color: #051B26;
-  width: 25%;
-  font-size: 14px;
-
-  &__mobile {
-    width: 25%;
   }
 }
 
@@ -191,35 +172,56 @@ $shrift: Ubuntu;
   }
 }
 
+.header__burger {
+  width: 26px;
+  height: 12px;
+  left: 24px;
+  margin-right: 8px;
+
+  div {
+    background-color: #B78A61;
+    height: 2px;
+
+    &:not(:first-child) {
+      margin-top: 6px;
+    }
+  }
+}
+
 
 .carousel {
   padding-top: 40px;
   display: grid;
   gap: 20px;
   color: #ffffff;
-  &__grid{
+
+
+  &__grid {
     background-color: #051B26;
     padding-right: 60px;
     padding-left: 60px;
   }
 
-  &__button{
+  &__button {
     font-size: 40px;
     font-weight: 500;
     text-align: left;
-    &__category{
+
+    &__category {
       color: #4b5563;
       transition: .3s;
-      &:focus{
+
+      &:focus {
         color: #fff;
       }
     }
   }
-  &__show{
+
+  &__show {
     align-items: center;
     grid-column-start: 1;
     grid-column-end: 4;
-    gap:30px;
+    gap: 30px;
     grid-row-start: 2;
     font-weight: 400;
     font-size: 18px;
@@ -227,8 +229,56 @@ $shrift: Ubuntu;
     line-height: 27px;
     display: inline-flex;
   }
+}
 
+.burger__menu {
+  width: 180px;
+  background-color: #051B26;
+  color: white;
+  height: 117%;
+  position: absolute;
 
+  &__close {
+    display: flex;
+    flex-direction: column;
+    height: 18px;
+    width: 18px;
+    margin-left: 24px;
+    padding-top: 51px;
+
+    div {
+      width: 22.63px;
+      height: 2px;
+      background-color: #B78A61;
+    }
+
+    &:first-child {
+      transform: rotateZ(45deg);
+    }
+
+    &:last-child {
+      transform: rotateZ(-45deg);
+    }
+  }
+}
+
+.welcome__page {
+  padding-left: 60px;
+  padding-right: 60px;
+  grid-template-columns: repeat(12, 1fr);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    padding-top: 150px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 84px;
+    grid-column-start: 1;
+    grid-column-end: 8;
+  }
 }
 
 
@@ -246,12 +296,19 @@ $shrift: Ubuntu;
   .header__block {
     padding-left: 20px;
     padding-right: 20px;
+    color: #B78A61;
+    height: 137px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+  }
+  .header__left {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    color: #B78A61;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 6;
   }
-
   .cards {
     &__grid {
       display: grid;
@@ -269,6 +326,51 @@ $shrift: Ubuntu;
   }
   .cards__button__inBasket__btn {
     font-size: 16px;
+  }
+  .logo__mobile {
+    grid-column-start: 1;
+    width: auto;
+    height: 66px;
+    display: block;
+
+    img {
+      margin: auto;
+      width: 48px;
+      height: 44px;
+    }
+
+    div {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  .icon__container {
+    display: flex;
+    justify-content: right;
+    grid-column-start: 9;
+    grid-column-end: 13;
+  }
+  .icon__mobile {
+    filter: invert(100%);
+    margin-left: 35px;
+
+    button {
+      width: 5%;
+      height: 5%;
+    }
+  }
+  .welcome__page {
+    padding-left: 26px;
+    padding-right: 26px;
+
+    &__header {
+      padding-top: 39px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+    }
+
   }
 }
 

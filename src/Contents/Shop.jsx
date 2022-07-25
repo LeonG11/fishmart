@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Cards from "../Components/Cards";
 import Footer from "./Footer";
+import {CarouselButton} from "../Components/CarouselButton";
 
 
 const productArray = [
@@ -114,14 +115,8 @@ const productArray = [
     },
 ]
 
-function CarouselButton(props) {
-    return <button className="carousel__button__category" onClick={props.onClick}>{props.name.toUpperCase()}</button>;
-}
-
 export default function Shop() {
     const [category, setCategory] = useState("");
-
-
     const map = productArray.map(n => <Cards src={n.src} name={n.name} divider={n.divider} place={n.place}
                                              price={n.price}/>);
     return (
@@ -130,18 +125,18 @@ export default function Shop() {
                 <div className="carousel">
                     <button className="carousel__button" onClick={() => setCategory("")}>Ассортимент
                     </button>
-
                     <div className="carousel__show">
                         <CarouselButton name={"рыба"} onClick={() => setCategory("Fish")}></CarouselButton>
                         <CarouselButton name={"крабы"} onClick={() => setCategory("Crab")}></CarouselButton>
-                        <CarouselButton name={"гребешки и мидии"} onClick={() => setCategory("Scallop")}></CarouselButton>
+                        <CarouselButton name={"гребешки и мидии"}
+                                        onClick={() => setCategory("Scallop")}></CarouselButton>
                         <CarouselButton name={"креветки"} onClick={() => setCategory("Shrimp")}></CarouselButton>
                         <CarouselButton name={"устрицы"} onClick={() => setCategory("Ouster")}></CarouselButton>
                         <CarouselButton name={"кальмары"} onClick={() => setCategory("Squid")}></CarouselButton>
                     </div>
                 </div>
                 <div className="cards__grid ">
-                    {category === "" ? map : productArray.filter(n => n.category === category).map(n =><Cards
+                    {category === "" ? map : productArray.filter(n => n.category === category).map(n => <Cards
                         src={n.src}
                         name={n.name}
                         divider={n.divider}
