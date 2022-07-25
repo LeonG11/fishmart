@@ -1,9 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 
 function BurgerMenu() {
-    const [isOpen, setIsOpen] = useState(true);
-    return <div className="burger__menu" hidden={isOpen}>
-        <button className="burger__menu__close" onClick={() => setIsOpen(!isOpen)}>
+    return <div className="burger__menu" hidden={true}>
+        <button className="burger__menu__close">
             <div></div>
             <div></div>
         </button>

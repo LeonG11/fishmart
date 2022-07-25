@@ -5,6 +5,7 @@ $shrift: Ubuntu;
 
 * {
   font-family: Ubuntu, "Roboto Light", sans-serif, Ariala;
+  scroll-behavior: smooth;
 }
 
 .fm {
@@ -281,6 +282,32 @@ $shrift: Ubuntu;
   }
 }
 
+.fishfish{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  background: #051B26;
+  color: white;
+  font-weight: 500;
+  padding: 60px;
+  gap: 20px;
+  &__header{
+    font-weight: 500;
+    font-size: 40px;
+    grid-area:1/1/2/7;
+  }
+  &__text{
+    //font-[300] text-[24px] leading-[31px] mb-[50%]
+    font-weight: 300;
+    line-height: 31px;
+    font-size: 24px;
+    grid-area:2/2/3/7;
+  }
+  &__img{
+    //mt-[130px] pb-[50vh]
+
+    grid-area:1/8/3/13;
+  }
+}
 
 @media screen and (max-width: 1140px) {
   .nav__link {
@@ -289,11 +316,24 @@ $shrift: Ubuntu;
 
 }
 
+@media screen and (min-width: 768px) {
+  .telephone {
+    position: absolute;
+    right: 60px;
+    color: rgba(210, 204, 204, 0.81);
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .telephone {
+    position: absolute;
+    right: 24px;
+    color: rgba(210, 204, 204, 0.81);
+  }
   .nav__link {
     font-size: 12px;
   }
-  .carousel__show{
+  .carousel__show {
     margin-left: 0;
     font-size: 16px;
     font-weight: 400;
@@ -381,8 +421,39 @@ $shrift: Ubuntu;
     }
 
   }
-  .carousel__button__category{
+  .carousel__button__category {
     line-height: 1;
+  }
+
+  .fishfish{
+    padding: 0 24px 24px 24px;
+    flex-direction: column;
+    display: flex;
+
+
+    &__header{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &__img{
+      margin-top: 30px;
+      display: block;
+      width: 100%;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__text{
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      text-align: center;
+    }
   }
 }
 
@@ -392,7 +463,7 @@ $shrift: Ubuntu;
       grid-template-columns: minmax(0, 1fr);
     }
   }
-  .carousel__show{
+  .carousel__show {
     margin-bottom: -20px;
   }
 }

@@ -7,13 +7,10 @@ const MobileFooter = () => {
         <div>
             <MediaQuery maxWidth={768}>
             <>
-                <div className="header__block">
+                <div className="header__block" style={{
+                    backgroundColor:"rgba(28, 55, 81)"
+                }}>
                     <div className="header__left">
-                        <button className="header__burger">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </button>
                         <Link to="/">
                             <div className="logo__mobile">
                                 <img src="./img/logo.svg" alt="FISH FISH"/>
@@ -21,18 +18,7 @@ const MobileFooter = () => {
                             </div>
                         </Link>
                     </div>
-                    <div className="icon__container">
-                        <Link to="/login">
-                            <button>
-                                <img src="./img/user.svg" alt="ЛК" className="icon__mobile"/>
-                            </button>
-                        </Link>
-                        <Link to="/basket">
-                            <button>
-                                <img src="./img/basket.svg" alt="ЛК" className="icon__mobile"/>
-                            </button>
-                        </Link>
-                    </div>
+                    <a href="tel:88009002030" className="telephone">+7 (800) 900-20-30</a>
                 </div>
             </>
         </MediaQuery>
