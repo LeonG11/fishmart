@@ -3,8 +3,6 @@ import {Link} from "react-router-dom";
 import React from "react";
 
 export function MobileNav() {
-
-
     return <MediaQuery maxWidth={768}>
         <>
             <div className="header__block">
