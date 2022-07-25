@@ -293,6 +293,15 @@ $shrift: Ubuntu;
   .nav__link {
     font-size: 12px;
   }
+  .carousel__show{
+    margin-left: 0;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .header__block {
     padding-left: 20px;
     padding-right: 20px;
@@ -372,6 +381,9 @@ $shrift: Ubuntu;
     }
 
   }
+  .carousel__button__category{
+    line-height: 0.2;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -379,6 +391,9 @@ $shrift: Ubuntu;
     &__grid {
       grid-template-columns: minmax(0, 1fr);
     }
+  }
+  .carousel__show{
+    margin-bottom: -20px;
   }
 }
 
