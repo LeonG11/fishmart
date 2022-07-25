@@ -222,13 +222,19 @@ $shrift: Ubuntu;
     align-items: center;
     grid-column-start: 1;
     grid-column-end: 4;
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 14px;
     grid-row-start: 2;
     font-weight: 400;
     font-size: 18px;
     justify-content: center;
     line-height: 27px;
     display: inline-flex;
+    transition: .3s;
+
+    &:focus {
+      color: white;
+    }
   }
 }
 
@@ -282,29 +288,30 @@ $shrift: Ubuntu;
   }
 }
 
-.fishfish{
+.fishfish {
   display: grid;
-  grid-template-columns: repeat(12,1fr);
+  grid-template-columns: repeat(12, 1fr);
   background: #051B26;
   color: white;
   font-weight: 500;
   padding: 60px;
   gap: 20px;
-  &__header{
+
+  &__header {
     font-weight: 500;
     font-size: 40px;
-    grid-area:1/1/2/7;
+    grid-area: 1/1/2/7;
   }
-  &__text{
+
+  &__text {
     font-weight: 300;
     line-height: 31px;
     font-size: 24px;
-    grid-area:2/2/3/7;
+    grid-area: 2/2/3/7;
   }
-  &__img{
-    //mt-[130px] pb-[50vh]
 
-    grid-area:1/8/3/13;
+  &__img {
+    grid-area: 1/8/3/13;
   }
 }
 
@@ -329,12 +336,13 @@ $shrift: Ubuntu;
     position: absolute;
     right: 24px;
     color: rgba(210, 204, 204, 0.81);
+    align-items: center;
   }
   .nav__link {
     font-size: 12px;
   }
-  .carousel{
-    &__grid{
+  .carousel {
+    &__grid {
       padding-right: 20px;
       padding-left: 20px;
     }
@@ -371,13 +379,13 @@ $shrift: Ubuntu;
       gap: 10px;
     }
 
-    &__description {
+    &__description{
       font-size: 16px;
     }
-
     &__place {
       font-size: 16px;
     }
+
   }
   .cards__button__inBasket__btn {
     font-size: 16px;
@@ -431,29 +439,31 @@ $shrift: Ubuntu;
     line-height: 1;
   }
 
-  .fishfish{
+  .fishfish {
     padding: 0 24px 24px 24px;
     flex-direction: column;
     display: flex;
 
 
-    &__header{
+    &__header {
       font-weight: 500;
       font-size: 24px;
       line-height: 36px;
     }
-    &__img{
+
+    &__img {
       margin-top: 30px;
       display: block;
       width: 100%;
 
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
-    &__text{
+
+    &__text {
       margin-top: 30px;
       font-size: 18px;
       font-weight: 400;
