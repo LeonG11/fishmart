@@ -296,7 +296,6 @@ $shrift: Ubuntu;
     grid-area:1/1/2/7;
   }
   &__text{
-    //font-[300] text-[24px] leading-[31px] mb-[50%]
     font-weight: 300;
     line-height: 31px;
     font-size: 24px;
@@ -333,6 +332,12 @@ $shrift: Ubuntu;
   }
   .nav__link {
     font-size: 12px;
+  }
+  .carousel{
+    &__grid{
+      padding-right: 20px;
+      padding-left: 20px;
+    }
   }
   .carousel__show {
     margin-left: 0;
@@ -466,6 +471,19 @@ $shrift: Ubuntu;
   }
   .carousel__show {
     margin-bottom: -20px;
+  }
+  .telephone {
+    position: absolute;
+    right: 24px;
+    color: rgba(210, 204, 204, 0.81);
+  }
+  .carousel__show {
+    margin-left: 0;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
