@@ -1,0 +1,86 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks",
+        "prettier"
+    ],
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            },
+            {
+                "usePrettierrc": true
+            }
+        ],
+        "import/no-dynamic-require":"off",
+        "global-require": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "no-use-before-define": "off",
+        "react/react-in-jsx-scope": "off",
+        "import/no-cycle": "off",
+        "react/prop-types": "off",
+        "react/jsx-filename-extension": "off",
+        "import/no-named-as-default": "off",
+        "import/no-named-as-default-member": "off",
+        "react/jsx-props-no-spreading": "off",
+        "no-param-reassign": "off",
+        "radix": "off",
+        "import/order": "off",
+        "no-plusplus": "off",
+        "no-underscore-dangle": "off",
+        "no-unused-expressions": "off",
+        "array-callback-return": "warn",
+        "react/jsx-no-bind": "off",
+        "class-methods-use-this": "off",
+        "consistent-return": "off",
+        "new-cap": "off",
+        "react/destructuring-assignment": "off",
+        "react/forbid-prop-types": "off",
+        "import/prefer-default-export": "off",
+        "react/no-unused-state": "warn",
+        "no-unused-vars": "warn",
+        "no-nested-ternary": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "react/sort-comp": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "no-return-assign": "warn",
+        "react/no-array-index-key": "warn",
+        "guard-for-in": "warn",
+        "no-restricted-syntax": "warn",
+        "max-classes-per-file": "off",
+        "react/state-in-constructor": "off",
+        "react/static-property-placement": "off",
+        "react/prefer-stateless-function": "off",
+        "react/no-did-update-set-state": "warn",
+        "camelcase": "off",
+        "prefer-destructuring": "warn",
+        "no-await-in-loop": "warn",
+        "no-restricted-globals": "off",
+        "no-bitwise": "off",
+        "eqeqeq": "warn",
+        "no-shadow": "warn",
+        "jsx-a11y/label-has-associated-control": "off",
+        "react/button-has-type": "off"
+
+    }
+}

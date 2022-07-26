@@ -1,14 +1,14 @@
 import React from "react";
-import {MobileNav} from "../Components/MobileNav";
-import {DesktopNav} from "../Components/DesktopNav";
+import { MobileNav } from "../Components/MobileNav";
+import { DesktopNav } from "../Components/DesktopNav";
 
 function TopLink() {
-    return (
-        <>
-            <MobileNav/>
-            <DesktopNav/>
-        </>
-    );
+  return (
+    <>
+      <MobileNav />
+      <DesktopNav />
+    </>
+  );
 }
 
 export default TopLink;
