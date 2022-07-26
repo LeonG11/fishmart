@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function MobileFooter() {
   return (
     <div>
-      <MediaQuery maxWidth={768}>
+      <MediaQuery maxWidth={767}>
         <div>
           <div
             className="header__block"

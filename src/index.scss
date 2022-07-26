@@ -1,7 +1,8 @@
+/*stylelint-disable*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* stylelint-enable */
 $shrift: ubuntu;
 
 * {
@@ -13,7 +14,7 @@ $shrift: ubuntu;
 	padding-top: 30px;
 	padding-bottom: 30px;
 
-	transition: 0.15s ease-in-out;
+	transition: .15s ease-in-out;
 }
 
 .fm:hover {
@@ -97,7 +98,7 @@ $shrift: ubuntu;
 	width: 30px;
 	height: 30px;
 
-	transition: 0.5s;
+	transition: .5s;
 
 	border-radius: 50%;
 
@@ -114,7 +115,7 @@ $shrift: ubuntu;
 		height: 2px;
 		margin-top: 2px;
 
-		transition: 0.5s;
+		transition: .5s;
 
 		border-radius: 1px;
 		background-color: #B78A61;
@@ -127,7 +128,7 @@ $shrift: ubuntu;
 	&__button {
 		margin-top: 10px;
 
-		transition: 0.5s;
+		transition: .5s;
 	}
 }
 
@@ -149,6 +150,12 @@ $shrift: ubuntu;
 
 		border-radius: 6px;
 	}
+
+
+	&__name {
+		font-size: clamp(26px, 20px, 16px);
+	}
+
 
 	&__description {
 		margin-top: 8px;
@@ -245,12 +252,15 @@ $shrift: ubuntu;
 		font-weight: 500;
 
 		&__category {
-			transition: 0.3s;
+			transition: .3s;
 
 			color: #4B5563;
 
 			&:focus {
-				color: #FFF;
+				color: #FFFFFF;
+			}
+			&:hover {
+				color: #B78A61;
 			}
 		}
 	}
@@ -260,7 +270,7 @@ $shrift: ubuntu;
 		align-items: center;
 		justify-content: center;
 
-		transition: 0.3s;
+		transition: .3s;
 
 		font-size: 18px;
 		font-weight: 400;
@@ -270,9 +280,6 @@ $shrift: ubuntu;
 		row-gap: 14px;
 		grid-row-start: 2;
 
-		&:focus {
-			color: white;
-		}
 	}
 }
 
@@ -540,8 +547,6 @@ $shrift: ubuntu;
 		}
 	}
 }
-
-
 
 @media screen and (max-width: 500px) {
 	.cards {

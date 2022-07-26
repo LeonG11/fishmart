@@ -4,7 +4,7 @@ import React from "react";
 
 export function MobileNav() {
   return (
-    <MediaQuery maxWidth={768}>
+    <MediaQuery maxWidth={767}>
       <div>
         <div className="header__block">
           <div className="header__left">
