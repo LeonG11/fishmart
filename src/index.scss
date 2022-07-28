@@ -1,41 +1,38 @@
-/*stylelint-disable*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* stylelint-enable */
-$shrift: ubuntu;
 
 * {
-	font-family: Ubuntu, "Roboto Light", sans-serif, Ariala;
+	font-family: "Ubuntu", "Roboto Light", sans-serif, "Arial";
 	scroll-behavior: smooth;
 }
 
 .fm {
 	padding-top: 30px;
 	padding-bottom: 30px;
-
-	transition: .15s ease-in-out;
+	transition: 0.15s ease-in-out;
 }
 
 .fm:hover {
 	margin-top: -10px;
 }
 
+.footer {
+	background-color: #1C3751;
+}
+
 .header__block {
 	display: grid;
 	align-items: center;
-
-	height: 110px;
+	grid-template-columns: repeat(12, 1fr);
 	padding-right: 60px;
 	padding-left: 60px;
-
-	color: white;
-	background-color: #051B26;
-
-	font-size: 18px;
+	height: 110px;
 	font-weight: 400;
+	font-size: 18px;
 	line-height: 27px;
-	grid-template-columns: repeat(12, 1fr);
+	color: #FFF;
+	background-color: #051B26;
 	gap: 1.3%;
 
 	&__a {
@@ -47,36 +44,36 @@ $shrift: ubuntu;
 	display: block;
 
 	img {
+		margin: auto;
 		width: 55px;
 		height: 60px;
-		margin: auto;
 	}
 
 	div {
 		display: inline;
-
 		white-space: nowrap;
-
 		color: #B78A61;
 	}
 }
 
-.nav__link {
-	display: flex;
-	align-items: center;
-	flex-direction: row;
-
+.telephone {
+	grid-column: 11/13;
+	font-size: clamp(0.75rem, 0.1786rem + 1.1905vw, 1.25rem);
+	text-align: right;
 	color: rgb(210 204 204 / 81%);
-	grid-column: 2/12;
-	gap: 1.94%;
+}
+
+.nav__link {
+	grid-column: 2/11;
+	margin: auto;
+	font-size: clamp(0.875rem, 0.5893rem + 0.5952vw, 1.125rem);
+	white-space: nowrap;
+	color: rgb(210 204 204 / 81%);
 
 	&__container {
 		display: flex;
-		align-items: center;
 		flex-direction: row;
-
-		margin-right: auto;
-		margin-left: auto;
+		align-items: center;
 		gap: 28px;
 	}
 }
@@ -89,18 +86,23 @@ $shrift: ubuntu;
 .burger {
 	position: absolute;
 	left: 5%;
-
 	display: flex;
-	align-items: center;
 	flex-direction: column;
+	align-items: center;
 	justify-content: center;
-
+	border-radius: 50%;
 	width: 30px;
 	height: 30px;
+	transition: 0.5s;
 
-	transition: .5s;
-
-	border-radius: 50%;
+	div {
+		margin-top: 2px;
+		border-radius: 1px;
+		width: 50%;
+		height: 2px;
+		background-color: #B78A61;
+		transition: 0.5s;
+	}
 
 	&:hover {
 		background-color: #898686;
@@ -109,17 +111,6 @@ $shrift: ubuntu;
 			background-color: #FFF;
 		}
 	}
-
-	div {
-		width: 50%;
-		height: 2px;
-		margin-top: 2px;
-
-		transition: .5s;
-
-		border-radius: 1px;
-		background-color: #B78A61;
-	}
 }
 
 .menu {
@@ -127,101 +118,119 @@ $shrift: ubuntu;
 
 	&__button {
 		margin-top: 10px;
-
-		transition: .5s;
+		transition: 0.5s;
 	}
+}
+
+.dot {
+	border-radius: 4px;
+	width: 4px;
+	height: 4px;
+	background-color: #FFF;
 }
 
 .cards {
 	margin-bottom: 60px;
-
 	color: #FFF;
 
 	&__grid {
 		display: grid;
-
-		margin-top: 60px;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
+		margin-top: 60px;
 		gap: 20px;
 	}
 
 	&__img {
-		width: 100%;
-
 		border-radius: 6px;
+		width: 100%;
 	}
-
-
-	&__name {
-		font-size: clamp(26px, 20px, 16px);
-	}
-
 
 	&__description {
 		margin-top: 8px;
-
-		font-size: 26px;
 		font-weight: 700;
 	}
 
 	&__box {
 		display: flex;
 		justify-content: space-between;
+		margin-top: 8px;
+		font-weight: 700;
+		font-size: clamp(1rem, 0.2857rem + 1.4881vw, 1.625rem);
 	}
 
 	&__place {
 		margin-top: 10px;
-
-		font-size: 20px;
 		font-weight: 300;
+		font-size: clamp(1.125rem, 0.9821rem + 0.2976vw, 1.25rem);
 	}
 
 	&__down {
 		display: flex;
-		align-items: center;
 		flex-direction: row;
+		align-items: center;
 		justify-content: space-between;
 	}
 
 	&__button {
 		display: flex;
+		flex-direction: row;
 		align-items: center;
 		justify-content: space-evenly;
-
-		width: 114px;
-		height: 39px;
 		margin-top: 67px;
-
 		border-radius: 6px;
-		background-color: #B78A61;
-
-		font-size: 18px;
+		width: 32%;
+		height: 39px;
 		font-weight: 400;
-		line-height: 27px;
+		font-size: 18px;
+		color: #FFF;
+		background-color: #B78A61;
 
 		&__inBasket {
 			align-items: center;
-
 			margin-top: 67px;
-
-			white-space: nowrap;
-
-			font-size: 20px;
 			font-weight: 700;
+			font-size: 20px;
+			white-space: nowrap;
 		}
+	}
+}
+
+.arrow {
+	display: flex;
+	align-items: center;
+
+	&__name {
+		margin-right: 5%;
+		font-size: clamp(1rem, 0.7143rem + 0.5952vw, 1.25rem);
+		transition: 0.5s;
+
+		&:hover {
+			color: #F87171;
+		}
+	}
+
+	&__img {
+		z-index: 10;
+		width: 65px;
+	}
+
+	&__dotted {
+		margin-left: -11%;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		background: #B78A61;
 	}
 }
 
 .header__burger {
 	left: 24px;
-
+	margin-right: 8px;
 	width: 26px;
 	height: 12px;
-	margin-right: 8px;
 
 	div {
 		height: 2px;
-
 		background-color: #B78A61;
 
 		&:not(:first-child) {
@@ -232,33 +241,29 @@ $shrift: ubuntu;
 
 .carousel {
 	display: grid;
-
 	padding-top: 40px;
-
 	color: #FFF;
 	gap: 20px;
 
 	&__grid {
 		padding-right: 60px;
 		padding-left: 60px;
-
 		background-color: #051B26;
 	}
 
 	&__button {
+		font-weight: 500;
+		font-size: 40px;
 		text-align: left;
 
-		font-size: 40px;
-		font-weight: 500;
-
 		&__category {
-			transition: .3s;
-
 			color: #4B5563;
+			transition: 0.3s;
 
 			&:focus {
-				color: #FFFFFF;
+				color: #FFF;
 			}
+
 			&:hover {
 				color: #B78A61;
 			}
@@ -267,44 +272,37 @@ $shrift: ubuntu;
 
 	&__show {
 		display: inline-flex;
+		column-gap: 30px;
 		align-items: center;
 		justify-content: center;
-
-		transition: .3s;
-
-		font-size: 18px;
-		font-weight: 400;
-		line-height: 27px;
 		grid-column: 1/4;
-		column-gap: 30px;
-		row-gap: 14px;
 		grid-row-start: 2;
-
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 27px;
+		transition: 0.3s;
+		row-gap: 14px;
 	}
 }
 
 .burger__menu {
 	position: absolute;
-
 	width: 180px;
 	height: 120%;
-
-	color: white;
+	color: #FFF;
 	background-color: #051B26;
 
 	&__close {
 		display: flex;
 		flex-direction: column;
-
-		width: 18px;
-		height: 18px;
 		margin-left: 24px;
 		padding-top: 51px;
+		width: 18px;
+		height: 18px;
 
 		div {
 			width: 22.63px;
 			height: 2px;
-
 			background-color: #B78A61;
 		}
 
@@ -321,47 +319,41 @@ $shrift: ubuntu;
 .welcome__page {
 	display: flex;
 	flex-direction: column;
-
-	height: 100vh;
+	grid-template-columns: repeat(12, 1fr);
 	padding-right: 60px;
 	padding-left: 60px;
-
-	color: white;
-	grid-template-columns: repeat(12, 1fr);
+	height: 100vh;
+	color: #FFF;
 
 	&__header {
-		padding-top: 150px;
-
-		font-size: 64px;
-		font-weight: 700;
-		line-height: 84px;
 		grid-column: 1/8;
+		padding-top: 150px;
+		font-weight: 700;
+		font-size: 64px;
+		line-height: 84px;
 	}
 }
 
 .fishfish {
 	display: grid;
-
-	padding: 60px;
-
-	color: white;
-	background: #051B26;
-
-	font-weight: 500;
 	grid-template-columns: repeat(12, 1fr);
+	padding: 60px;
+	font-weight: 500;
+	color: #FFF;
+	background: #051B26;
 	gap: 20px;
 
 	&__header {
-		font-size: 40px;
-		font-weight: 500;
 		grid-area: 1/1/2/7;
+		font-weight: 500;
+		font-size: 40px;
 	}
 
 	&__text {
-		font-size: 24px;
-		font-weight: 300;
-		line-height: 31px;
 		grid-area: 2/2/3/7;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 31px;
 	}
 
 	&__img {
@@ -369,36 +361,26 @@ $shrift: ubuntu;
 	}
 }
 
-@media screen and (max-width: 1140px) {
-	.nav__link {
-		font-size: 16px;
+@media screen and(max-width: 1000px) {
+	.arrow__dotted {
+		width: 30px;
+		height: 30px;
 	}
-}
 
-@media screen and (min-width: 768px) {
-	.telephone {
-		position: absolute;
-		right: 60px;
-
-		align-items: center;
-
-		color: rgb(210 204 204 / 81%);
+	.arrow__img {
+		width: 35px;
 	}
 }
 
 @media screen and (max-width: 768px) {
-	.telephone {
-		display: -webkit-flex;
-		position: absolute;
-		right: 24px;
-
-		align-items: center;
-
-		color: rgb(210 204 204 / 81%);
-	}
-
 	.nav__link {
 		font-size: 12px;
+	}
+
+	.telephone {
+		grid-column: 6/13;
+		font-size: 18px;
+		text-align: right;
 	}
 
 	.carousel {
@@ -412,29 +394,25 @@ $shrift: ubuntu;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-
 		margin-left: 0;
-
-		font-size: 16px;
 		font-weight: 400;
+		font-size: 16px;
 	}
 
 	.header__block {
 		display: grid;
-
-		height: 137px;
+		grid-template-columns: repeat(12, 1fr);
 		padding-right: 20px;
 		padding-left: 20px;
-
+		height: 137px;
 		color: #B78A61;
-		grid-template-columns: repeat(12, 1fr);
 		gap: 10px;
 	}
 
 	.header__left {
 		display: flex;
-		align-items: center;
 		flex-direction: row;
+		align-items: center;
 		grid-column: 1/6;
 	}
 
@@ -460,20 +438,19 @@ $shrift: ubuntu;
 
 	.logo__mobile {
 		display: block;
-
+		grid-column-start: 1;
 		width: auto;
 		height: 66px;
-		grid-column-start: 1;
 
 		img {
+			margin: auto;
 			width: 48px;
 			height: 44px;
-			margin: auto;
 		}
 
 		div {
-			font-size: 14px;
 			font-weight: 400;
+			font-size: 14px;
 		}
 	}
 
@@ -484,9 +461,8 @@ $shrift: ubuntu;
 	}
 
 	.icon__mobile {
-		filter: invert(100%);
-
 		margin-left: 35px;
+		filter: invert(100%);
 
 		button {
 			width: 5%;
@@ -500,9 +476,8 @@ $shrift: ubuntu;
 
 		&__header {
 			padding-top: 39px;
-
-			font-size: 24px;
 			font-weight: 500;
+			font-size: 24px;
 			line-height: 36px;
 		}
 	}
@@ -514,20 +489,18 @@ $shrift: ubuntu;
 	.fishfish {
 		display: flex;
 		flex-direction: column;
-
 		padding: 0 24px 24px;
 
 		&__header {
-			font-size: 24px;
 			font-weight: 500;
+			font-size: 24px;
 			line-height: 36px;
 		}
 
 		&__img {
 			display: block;
-
-			width: 100%;
 			margin-top: 30px;
+			width: 100%;
 
 			img {
 				width: 100%;
@@ -538,12 +511,10 @@ $shrift: ubuntu;
 
 		&__text {
 			margin-top: 30px;
-
-			text-align: center;
-
-			font-size: 18px;
 			font-weight: 400;
+			font-size: 18px;
 			line-height: 27px;
+			text-align: center;
 		}
 	}
 }
@@ -555,21 +526,12 @@ $shrift: ubuntu;
 		}
 	}
 
-	.telephone {
-		position: absolute;
-		right: 24px;
-
-		color: rgb(210 204 204 / 81%);
-	}
-
 	.carousel__show {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-
 		margin-left: 0;
-
-		font-size: 16px;
 		font-weight: 400;
+		font-size: 16px;
 	}
 }

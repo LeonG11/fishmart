@@ -7,7 +7,7 @@ export default function DesktopFooter() {
   return (
     <div>
       <MediaQuery minWidth={768}>
-        <div className="header__block">
+        <div className="header__block" style={{ backgroundColor: "#1c3751" }}>
           <Link to="/" className="header__block__a">
             <div className="header__block__container">
               <img src="./img/logo.svg" alt="FISH FISH" />

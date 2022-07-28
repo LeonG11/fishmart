@@ -10,7 +10,7 @@ function MobileFooter() {
           <div
             className="header__block"
             style={{
-              backgroundColor: "rgba(28, 55, 81)",
+              backgroundColor: "#1c3751",
             }}
           >
             <div className="header__left">
