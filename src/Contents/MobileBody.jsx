@@ -11,14 +11,29 @@ export function MobileBody() {
           Cвежие морепродукты <br /> на любой вкус
         </div>
         <Link to="/menu" className="">
-          <ButtonArrow
-            fontSize="16px"
-            marginTop="14px"
-            marginLeft="17px"
-            fontWeight="400"
-            name="Смотреть ассортимент"
-            className="welcome__page__arrow"
-          />
+          <div className="arrow">
+            <div
+              className="arrow__name"
+              style={{
+                fontSize: "16px",
+                fontWeight: "500",
+                marginLeft: "17px",
+              }}
+            >
+              Смотреть ассортимент
+            </div>
+            <img
+              src="./img/arrow next.svg"
+              className="arrow__img"
+              alt="gentle"
+            />
+            <div
+              className="arrow__dotted"
+              style={{
+                marginLeft: "-3%",
+              }}
+            />
+          </div>
         </Link>
       </div>
     </MediaQuery>

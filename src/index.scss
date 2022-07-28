@@ -227,15 +227,12 @@
 	left: 24px;
 	margin-right: 8px;
 	width: 26px;
-	height: 12px;
+	height: 24px;
 
 	div {
+		margin-top: 6px;
 		height: 2px;
 		background-color: #B78A61;
-
-		&:not(:first-child) {
-			margin-top: 6px;
-		}
 	}
 }
 
@@ -329,8 +326,7 @@
 		grid-column: 1/8;
 		padding-top: 150px;
 		font-weight: 700;
-		font-size: 64px;
-		line-height: 84px;
+		font-size: clamp(1.5rem, 0.5844rem + 3.7951vw, 4rem);
 	}
 }
 
