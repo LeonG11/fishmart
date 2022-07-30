@@ -4,6 +4,12 @@ import React from "react";
 import { Dot } from "./Dot";
 
 export function DesktopNav() {
+  function getOnClick() {
+    return () => {
+      window.scrollTo(0, 0);
+    };
+  }
+
   return (
     <MediaQuery minWidth={768}>
       <div className="header__block">
@@ -15,15 +21,15 @@ export function DesktopNav() {
         </Link>
         <div className="nav__link">
           <div className="flex items-center flex-row ml-auto mr-auto gap-[28px]">
-            <Link to="/fishfish">
+            <Link to="/fishfish" onClick={getOnClick()}>
               <div className="fm">FISH FISH</div>
             </Link>
             <Dot />
-            <Link to="/menu">
+            <Link to="/menu" onClick={getOnClick()}>
               <div className="fm">АССОРТИМЕНТ</div>
             </Link>
             <Dot />
-            <Link to="/about">
+            <Link to="/about" onClick={getOnClick()}>
               <div className="fm">КОНТАКТЫ</div>
             </Link>
           </div>

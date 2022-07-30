@@ -83,16 +83,6 @@
 	height: 24px;
 }
 
-@keyframes dropIN {
-	0% {
-		left: 0;
-	}
-
-	100% {
-		left: -45%;
-	}
-}
-
 .burger {
 	position: fixed;
 	z-index: 999;
@@ -323,8 +313,8 @@
 	&__text {
 		grid-area: 2/2/3/7;
 		font-weight: 300;
-		font-size: 24px;
-		line-height: 31px;
+		font-size: clamp(1rem, 0.4286rem + 1.1905vw, 1.5rem);
+		line-height: clamp(1.5rem, 1rem + 1.0417vw, 1.9375rem);
 	}
 
 	&__img {

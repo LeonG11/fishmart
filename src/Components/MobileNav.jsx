@@ -5,6 +5,14 @@ import React, { useState } from "react";
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(true);
+
+  function changePages() {
+    return () => {
+      window.scrollTo(0, 0);
+      setIsOpen(!isOpen);
+    };
+  }
+
   return (
     <MediaQuery maxWidth={767}>
       {isOpen}
@@ -15,11 +23,17 @@ export function MobileNav() {
           </button>
         </div>
         <div className="burger__item">
-          <Link to="/fishfish">FISH FISH</Link>
+          <Link to="/fishfish" onClick={changePages()}>
+            FISH FISH
+          </Link>
           <Dot />
-          <Link to="/menu">АССОРТИМЕНТ</Link>
+          <Link to="/menu" onClick={changePages()}>
+            АССОРТИМЕНТ
+          </Link>
           <Dot />
-          <Link to="/about">КОНТАКТЫ</Link>
+          <Link to="/about" onClick={changePages()}>
+            КОНТАКТЫ
+          </Link>
         </div>
       </div>
       <div>

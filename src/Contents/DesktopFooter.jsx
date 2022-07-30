@@ -4,6 +4,12 @@ import { Link } from "react-router-dom";
 import { Dot } from "../Components/Dot";
 
 export default function DesktopFooter() {
+  function getOnclick() {
+    return () => {
+      window.scrollTo(0, 0);
+    };
+  }
+
   return (
     <div>
       <MediaQuery minWidth={768}>
@@ -17,15 +23,21 @@ export default function DesktopFooter() {
           <div className="nav__link">
             <div className="nav__link__container">
               <Link to="/fishfish">
-                <div className="fm">FISH FISH</div>
+                <div className="fm" onClick={getOnclick()}>
+                  FISH FISH
+                </div>
               </Link>
               <Dot />
               <Link to="/menu">
-                <div className="fm">АССОРТИМЕНТ</div>
+                <div className="fm" onClick={getOnclick()}>
+                  АССОРТИМЕНТ
+                </div>
               </Link>
               <Dot />
               <Link to="/about">
-                <div className="fm">КОНТАКТЫ</div>
+                <div className="fm" onClick={getOnclick()}>
+                  КОНТАКТЫ
+                </div>
               </Link>
             </div>
           </div>
