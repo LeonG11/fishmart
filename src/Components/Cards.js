@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import MediaQuery from "react-responsive";
 import { ButtonArrow } from "../Contents/ButtonArrow";
 
 function Cards({ divider, name, place, price, src }) {

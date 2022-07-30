@@ -1,7 +1,6 @@
 import MediaQuery from "react-responsive";
 import { Link } from "react-router-dom";
 import React from "react";
-import { ButtonArrow } from "./ButtonArrow";
 
 export function MobileBody() {
   return (
