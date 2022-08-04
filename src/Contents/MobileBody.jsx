@@ -15,7 +15,7 @@ export function MobileBody() {
               className="arrow__name"
               style={{
                 fontSize: "16px",
-                fontWeight: "500",
+                fontWeight: "400",
                 marginLeft: "17px",
               }}
             >
@@ -26,12 +26,7 @@ export function MobileBody() {
               className="arrow__img"
               alt="gentle"
             />
-            <div
-              className="arrow__dotted"
-              style={{
-                marginLeft: "-3%",
-              }}
-            />
+            <div className="arrow__dotted" style={{ marginLeft: "-14px" }} />
           </div>
         </Link>
       </div>
