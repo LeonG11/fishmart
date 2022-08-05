@@ -116,6 +116,7 @@ const productArray = [
 
 export default function Shop() {
   const [category, setCategory] = useState("");
+
   const map = productArray.map((n) => (
     <Cards
       src={n.src}
@@ -126,9 +127,13 @@ export default function Shop() {
       price={n.price}
     />
   ));
+
   return (
     <>
-      <div className="carousel__grid">
+      <div
+        className="carousel__grid"
+        onClick={() => (category === "" ? "" : setCategory(""))}
+      >
         <div className="carousel">
           <button
             type="button"

@@ -15,7 +15,18 @@ export function MobileNav() {
 
   return (
     <MediaQuery maxWidth={767}>
-      {isOpen}
+      {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
+      <button
+        style={{
+          display: isOpen ? "none" : "flex",
+          position: "absolute",
+          left: "50%",
+          width: "50%",
+          height: "100%",
+          zIndex: "999",
+        }}
+        onClick={() => setIsOpen(true)}
+      />
       <div className="burger" style={{ display: isOpen ? "none" : "flex" }}>
         <div className="burger__top">
           <button onClick={() => setIsOpen(!isOpen)}>
