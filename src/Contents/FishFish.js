@@ -7,7 +7,7 @@ function FishFish() {
       <div className="fishfish">
         <div className="fishfish__header">FISH FISH</div>
         <div className="fishfish__img">
-          <img src="./img/fishfish.svg" alt="logo" />
+          <img loading="lazy" src="./img/fishfish.svg" alt="logo" />
         </div>
         <div className="fishfish__text animate__animated animate__fadeIn">
           Мы «FISH FISH» занимаемся доставкой свежих морепродуктов и рыбы на

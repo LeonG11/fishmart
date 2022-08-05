@@ -12,7 +12,12 @@ export function ButtonArrow(props) {
       }}
     >
       <div className="arrow__name">{props.name}</div>
-      <img src="./img/arrow next.svg" className="arrow__img" alt="gentle" />
+      <img
+        loading="lazy"
+        src="./img/arrow next.svg"
+        className="arrow__img"
+        alt="gentle"
+      />
       <div className="arrow__dotted" />
     </div>
   );

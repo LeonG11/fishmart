@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { ButtonArrow } from "../Contents/ButtonArrow";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Cards({ divider, name, place, price, src }) {
   const [number, setNumber] = useState(0.0);
-
   const onClick = () =>
     setNumber(parseFloat(Math.max(number + parseFloat(divider), 0).toFixed(3)));
   const onClick1 = () =>
@@ -11,7 +11,7 @@ function Cards({ divider, name, place, price, src }) {
   return (
     <div>
       <div className="cards">
-        <img src={src} alt="" className="cards__img" />
+        <LazyLoadImage src={src} effect="opacity" className="cards__img" />
         <div className="cards__box">
           <div className="cards__name">{name}</div>
           <div className="cards__price">{price} ₽/ кг</div>

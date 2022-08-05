@@ -19,7 +19,7 @@ export function MobileNav() {
       <div className="burger" style={{ display: isOpen ? "none" : "flex" }}>
         <div className="burger__top">
           <button onClick={() => setIsOpen(!isOpen)}>
-            <img src="./img/close.svg" alt="close" />
+            <img loading="lazy" src="./img/close.svg" alt="close" />
           </button>
         </div>
         <div className="burger__item">
@@ -50,7 +50,7 @@ export function MobileNav() {
             </button>
             <Link to="/">
               <div className="logo__mobile">
-                <img src="./img/logo.svg" alt="FISH FISH" />
+                <img loading="lazy" src="./img/logo.svg" alt="FISH FISH" />
                 <div>FISH FISH</div>
               </div>
             </Link>
@@ -58,12 +58,22 @@ export function MobileNav() {
           <div className="icon__container">
             <Link to="/login">
               <button>
-                <img src="./img/user.svg" alt="ЛК" className="icon__mobile" />
+                <img
+                  loading="lazy"
+                  src="./img/user.svg"
+                  alt="ЛК"
+                  className="icon__mobile"
+                />
               </button>
             </Link>
             <Link to="/basket">
               <button>
-                <img src="./img/basket.svg" alt="ЛК" className="icon__mobile" />
+                <img
+                  loading="lazy"
+                  src="./img/basket.svg"
+                  alt="ЛК"
+                  className="icon__mobile"
+                />
               </button>
             </Link>
           </div>
