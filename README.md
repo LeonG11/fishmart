@@ -16,15 +16,15 @@ ___
 In this project used React _v18.2.0_ in condition with _React-router-dom_, for use state in this project used standard React library with _useState_ and _useEffect_ hooks.
 Build project carried out at expanse __WEBPACK__, in the future the project will be moved to a nextjs
 
-# Sass
+## Sass
 ___
 Sass used in variant scss with autocomplete, stylelint (in future was proposed to abandon it because was install prettier)
 
-# Eslint
+## Eslint
 ___
 Used for lint all project, in standard airbnb config
 
-# Prettier
+## Prettier
 ___
 Used only for formatting all files in project, make serious architetural revision
 
