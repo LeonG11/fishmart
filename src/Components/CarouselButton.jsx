@@ -1,6 +1,7 @@
 import React from "react";
 
 export function CarouselButton(props) {
+  // Use for button select in shop
   return (
     <button
       type="button"

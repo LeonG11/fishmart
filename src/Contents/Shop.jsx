@@ -168,7 +168,7 @@ export default function Shop() {
               onClick={() => (category === "" ? setCategory("Squid") : "")}
             />
           </div>
-      </div>
+        </div>
         <div className="cards__grid ">
           {category === ""
             ? map
