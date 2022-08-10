@@ -4,11 +4,13 @@ import Footer from "./Footer";
 export default function About() {
   return (
     <div>
+      {/* Background picture */}
       <img
         src="./img/Cards background.svg"
         className="about__background"
         alt="Картинка сзади"
       />
+      {/* Contact pages */}
       <div className="about">
         <div className="about__title">Контакты</div>
         <div className="about__text__bold">Связаться с нами:</div>

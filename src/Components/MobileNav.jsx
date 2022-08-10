@@ -4,8 +4,9 @@ import { Dot } from "./Dot";
 import React, { useState } from "react";
 
 export function MobileNav() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(true); // React state for opening check burger menu
 
+  // Function for scroll up pages
   function changePages() {
     return () => {
       window.scrollTo(0, 0);
@@ -15,18 +16,20 @@ export function MobileNav() {
 
   return (
     <MediaQuery maxWidth={767}>
+      {/* Button for open and close burger menu outside burger */}
       {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
       <button
         style={{
           display: isOpen ? "none" : "flex",
           position: "absolute",
           left: "50%",
-          width: "50%",
+          width: "40%",
           height: "100%",
           zIndex: "999",
         }}
         onClick={() => setIsOpen(true)}
       />
+      {/* button in Header for open/close burger menu */}
       <div className="burger" style={{ display: isOpen ? "none" : "flex" }}>
         <div className="burger__top">
           <button onClick={() => setIsOpen(!isOpen)}>
@@ -55,10 +58,11 @@ export function MobileNav() {
               className="header__burger"
               onClick={() => setIsOpen(!isOpen)}
             >
-              <div />
-              <div />
-              <div />
+              <div /> {/* This div use for make line in button */}
+              <div /> {/* This div use for make line in button */}
+              <div /> {/* This div use for make line in button */}
             </button>
+            {/* Logo in Header, use button for transition on main page */}
             <Link to="/">
               <div className="logo__mobile">
                 <img loading="lazy" src="./img/logo.svg" alt="FISH FISH" />
@@ -66,13 +70,15 @@ export function MobileNav() {
               </div>
             </Link>
           </div>
+          {/* Icon basket and login/signup in account, don't realease, will be in future:) */}
           <div className="icon__container">
+            {/* Link from React-router-dom from transition on any page */}
             <Link to="/login">
               <button>
                 <img
                   loading="lazy"
                   src="./img/user.svg"
-                  alt="ЛК"
+                  alt="Личный кабинет"
                   className="icon__mobile"
                 />
               </button>
@@ -82,7 +88,7 @@ export function MobileNav() {
                 <img
                   loading="lazy"
                   src="./img/basket.svg"
-                  alt="ЛК"
+                  alt="Корзина"
                   className="icon__mobile"
                 />
               </button>

@@ -116,8 +116,9 @@
 }
 
 .header__block__container {
-  display: block;
-
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
   img {
     margin: auto;
     width: 55px;
@@ -125,9 +126,9 @@
   }
 
   div {
-    display: inline;
     white-space: nowrap;
     color: #b78a61;
+    text-align: center;
   }
 }
 
@@ -135,7 +136,7 @@
   font-size: clamp(0.75rem, 0.1786rem + 1.1905vw, 1.25rem);
   color: rgb(210 204 204 / 81%);
   position: absolute;
-  right:5%;
+  right: 5%;
 }
 
 .nav__link {
@@ -156,6 +157,9 @@
 .icon {
   width: 24px;
   height: 24px;
+  &__container{
+    filter: invert(100%);
+  }
 }
 
 .burger {
@@ -163,7 +167,7 @@
   z-index: 999;
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 60%;
   height: 100%;
   font-size: 18px;
   text-align: center;
@@ -417,10 +421,10 @@
     padding: 0 20px 20px;
     background-color: #051b26;
     font-size: 20px;
-    &__title{
+    &__title {
       font-size: 24px;
     }
-    &__text__bold{
+    &__text__bold {
       text-align: center;
       margin-bottom: 6px;
     }
@@ -432,20 +436,26 @@
     text-align: right;
   }
 
-  .carousel__grid {
-      padding-right: 20px;
-      padding-left: 20px;
+  .carousel {
+    padding-top: 0;
+    &__grid {
+      padding: 0 20px 0px 20px;
+    }
+    &__button {
+      font-size: 24px;
+    }
+    &__button__category {
+      line-height: 1;
+    }
+    &__show {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 0;
+      font-weight: 400;
+      font-size: 16px;
+    }
   }
-
-  .carousel__show {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 0;
-    font-weight: 400;
-    font-size: 16px;
-  }
-
   .header__block {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -463,7 +473,8 @@
     grid-column: 1/6;
   }
 
-  .cards { &__grid {
+  .cards {
+    &__grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
@@ -496,22 +507,22 @@
     }
   }
 
-  .icon__container {
-    display: flex;
-    justify-content: right;
-    grid-column: 9/13;
-  }
+  .icon {
+    &__container {
+      display: flex;
+      justify-content: right;
+      grid-column: 9/13;
+      &__mobile {
+        margin-left: 35px;
+        filter: invert(100%);
 
-  .icon__mobile {
-    margin-left: 35px;
-    filter: invert(100%);
-
-    button {
-      width: 5%;
-      height: 5%;
+        button {
+          width: 5%;
+          height: 5%;
+        }
+      }
     }
   }
-
   .welcome__page {
     padding-right: 26px;
     padding-left: 26px;
@@ -522,10 +533,6 @@
       font-size: 24px;
       line-height: 36px;
     }
-  }
-
-  .carousel__button__category {
-    line-height: 1;
   }
 
   .fishfish {

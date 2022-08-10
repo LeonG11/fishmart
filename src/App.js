@@ -9,14 +9,15 @@ import Auth from "./Contents/Auth";
 
 function App() {
   return (
+    /* Use React-router-dom, function BrowserRouter used with spread operator in Router, Routes and Route */
     <Router>
       <Top />
       <Routes>
-        <Route path="/" element={<Body />} />
-        <Route path="/fishfish" element={<FishFish />} />
-        <Route path="/menu" element={<Shop />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/auth" element={<Auth />} />
+        <Route path="/" element={<Body />} /> {/* main page */}
+        <Route path="/fishfish" element={<FishFish />} /> {/* about page */}
+        <Route path="/menu" element={<Shop />} /> {/* shop page */}
+        <Route path="/about" element={<About />} /> {/* contact page */}
+        {/* <Route path="/auth" element={<Auth />} /> */}
       </Routes>
     </Router>
   );
