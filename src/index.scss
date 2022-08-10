@@ -21,6 +21,7 @@
 .about {
   font-weight: 500;
   font-size: 24px;
+  gap: 20px;
   padding: 60px;
   padding-bottom: 50px;
   color: white;
@@ -133,17 +134,16 @@
     white-space: nowrap;
     color: #b78a61;
   }
-}
 
 .telephone {
-  grid-column: 11/13;
   font-size: clamp(0.75rem, 0.1786rem + 1.1905vw, 1.25rem);
-  text-align: right;
   color: rgb(210 204 204 / 81%);
+  position: absolute;
+  right:5%;
 }
 
 .nav__link {
-  grid-column: 2/11;
+  grid-column: 2/12;
   margin: auto;
   font-size: clamp(0.875rem, 0.5893rem + 0.5952vw, 1.125rem);
   white-space: nowrap;
@@ -173,13 +173,11 @@
   text-align: center;
   color: #fff;
   background-color: #051b26;
-
   &__top {
     position: relative;
     margin: 51px 0 16px 24px;
     width: 18px;
   }
-
   &__item {
     display: flex;
     flex-direction: column;
@@ -401,7 +399,7 @@
   }
 }
 
-@media screen and(max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .arrow__dotted {
     width: 30px;
     height: 30px;
@@ -439,11 +437,9 @@
     text-align: right;
   }
 
-  .carousel {
-    &__grid {
+  .carousel__grid {
       padding-right: 20px;
       padding-left: 20px;
-    }
   }
 
   .carousel__show {
@@ -472,8 +468,7 @@
     grid-column: 1/6;
   }
 
-  .cards {
-    &__grid {
+  .cards { &__grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
@@ -487,7 +482,6 @@
       font-size: 16px;
     }
   }
-
   .cards__button__inBasket__btn {
     font-size: 16px;
   }
@@ -576,10 +570,8 @@
 }
 
 @media screen and (max-width: 500px) {
-  .cards {
-    &__grid {
+  .cards__grid {
       grid-template-columns: minmax(0, 1fr);
-    }
   }
 
   .carousel__show {

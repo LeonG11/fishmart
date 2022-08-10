@@ -143,26 +143,32 @@ export default function Shop() {
             Ассортимент
           </button>
           <div className="carousel__show">
-            <CarouselButton name="рыба" onClick={() => setCategory("Fish")} />
-            <CarouselButton name="крабы" onClick={() => setCategory("Crab")} />
+            <CarouselButton
+              name="рыба"
+              onClick={() => (category === "" ? setCategory("Fish") : "")}
+            />
+            <CarouselButton
+              name="крабы"
+              onClick={() => (category === "" ? setCategory("Crab") : "")}
+            />
             <CarouselButton
               name="гребешки и мидии"
-              onClick={() => setCategory("Scallop")}
+              onClick={() => (category === "" ? setCategory("Scallop") : "")}
             />
             <CarouselButton
               name="креветки"
-              onClick={() => setCategory("Shrimp")}
+              onClick={() => (category === "" ? setCategory("Shrimp") : "")}
             />
             <CarouselButton
               name="устрицы"
-              onClick={() => setCategory("Ouster")}
+              onClick={() => (category === "" ? setCategory("Ouster") : "")}
             />
             <CarouselButton
               name="кальмары"
-              onClick={() => setCategory("Squid")}
+              onClick={() => (category === "" ? setCategory("Squid") : "")}
             />
           </div>
-        </div>
+      </div>
         <div className="cards__grid ">
           {category === ""
             ? map
