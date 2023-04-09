@@ -8,6 +8,55 @@
   scroll-behavior: smooth;
 }
 
+.bodyClass {
+  background: url("./img/Background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.menu-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #051b26;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.menu.open {
+  left: 0;
+}
+
+.closeButton {
+  height: 2rem;
+  width: 2rem;
+  margin-top: 3rem;
+  margin-left: 1.5rem;
+}
+
+.up {
+  transition: 0.2s ease-in-out;
+}
+
+.up:hover {
+  transform: translateY(-0.5rem);
+}
+
 .fm {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -116,7 +165,7 @@
 }
 
 .header__block__container {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   img {
@@ -157,7 +206,7 @@
 .icon {
   width: 24px;
   height: 24px;
-  &__container{
+  &__container {
     filter: invert(100%);
   }
 }
@@ -183,15 +232,6 @@
     flex-direction: column;
     align-items: center;
     row-gap: 26px;
-  }
-}
-
-.menu {
-  padding: 20px;
-
-  &__button {
-    margin-top: 10px;
-    transition: 0.5s;
   }
 }
 
@@ -268,34 +308,6 @@
   }
 }
 
-.arrow {
-  display: flex;
-  align-items: center;
-
-  &__name {
-    margin-right: 5%;
-    font-size: clamp(1rem, 0.7143rem + 0.5952vw, 1.25rem);
-    transition: 0.5s;
-
-    &:hover {
-      color: #f87171;
-    }
-  }
-
-  &__img {
-    z-index: 10;
-    width: 65px;
-  }
-
-  &__dotted {
-    margin-left: -11%;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background: #b78a61;
-  }
-}
-
 .header__burger {
   left: 24px;
   margin-right: 8px;
@@ -352,23 +364,6 @@
     line-height: 27px;
     transition: 0.3s;
     row-gap: 14px;
-  }
-}
-
-.welcome__page {
-  display: flex;
-  flex-direction: column;
-  grid-template-columns: repeat(12, 1fr);
-  padding-right: 60px;
-  padding-left: 60px;
-  height: 100vh;
-  color: #fff;
-
-  &__header {
-    grid-column: 1/8;
-    padding-top: 150px;
-    font-weight: 700;
-    font-size: clamp(1.5rem, 0.5844rem + 3.7951vw, 4rem);
   }
 }
 

@@ -1,7 +1,6 @@
 import React from "react";
 import MediaQuery from "react-responsive";
 import { Link } from "react-router-dom";
-import { Dot } from "../Components/Dot";
 
 export default function DesktopFooter() {
   function getOnclick() {
@@ -27,13 +26,11 @@ export default function DesktopFooter() {
                   FISH FISH
                 </div>
               </Link>
-              <Dot />
               <Link to="/menu">
                 <div className="fm" onClick={getOnclick()}>
                   АССОРТИМЕНТ
                 </div>
               </Link>
-              <Dot />
               <Link to="/about">
                 <div className="fm" onClick={getOnclick()}>
                   КОНТАКТЫ

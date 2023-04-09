@@ -1,101 +1,114 @@
 import MediaQuery from "react-responsive";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Dot } from "./Dot";
-import React, { useState } from "react";
+import { ReactComponent as Basket } from "../img/basket.svg";
+import { ReactComponent as Logo } from "../img/logo.svg";
+import { ReactComponent as User } from "../img/user.svg";
+import Dot from "../Components/Dot";
 
 export function MobileNav() {
-  const [isOpen, setIsOpen] = useState(true); // React state for opening check burger menu
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Function for scroll up pages
-  function changePages() {
-    return () => {
-      window.scrollTo(0, 0);
-      setIsOpen(!isOpen);
-    };
-  }
-
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    console.log(menuOpen);
+  };
+  const styles = {
+    header: {
+      width: "auto",
+      height: "6.875rem",
+      backgroundColor: "#051B26",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
+    logo: {
+      marginLeft: "1rem",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      fontSize: "1rem",
+      color: "#B78A61",
+      fontWeight: "400",
+    },
+    blockLinks: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    blockButton: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
+    svg: {
+      marginRight: "2rem",
+    },
+    buttonBurger: {
+      marginLeft: "1.5rem",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+    },
+    burgerBox: {
+      width: "1.5rem",
+      height: "0.125rem",
+      backgroundColor: "#B78A61",
+      marginTop: "0.4rem",
+    },
+    alignItems: {
+      display: "flex",
+      alignItems: "center",
+    },
+    link: {
+      fontSize: "1.5rem",
+      paddingTop: "1.5rem",
+      color: "white",
+      fontWeight: "400",
+    },
+    dot: {
+      width: "0.25rem",
+      height: "0.25rem",
+      backgroundColor: "white",
+      borderRadius: "50%",
+      marginTop: "1.5rem",
+    },
+  };
   return (
-    <MediaQuery maxWidth={767}>
-      {/* Button for open and close burger menu outside burger */}
-      {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
-      <button
-        style={{
-          display: isOpen ? "none" : "flex",
-          position: "absolute",
-          left: "50%",
-          width: "40%",
-          height: "100%",
-          zIndex: "999",
-        }}
-        onClick={() => setIsOpen(true)}
-      />
-      {/* button in Header for open/close burger menu */}
-      <div className="burger" style={{ display: isOpen ? "none" : "flex" }}>
-        <div className="burger__top">
-          <button onClick={() => setIsOpen(!isOpen)}>
-            <img loading="lazy" src="./img/close.svg" alt="close" />
-          </button>
-        </div>
-        <div className="burger__item">
-          <Link to="/fishfish" onClick={changePages()}>
-            FISH FISH
+    <MediaQuery maxWidth={768}>
+      <header style={styles.header}>
+        <div className={`menu ${menuOpen ? "open" : ""}`}>
+          <Link to="/fishfish" style={styles.link}>
+            КОНТАКТЫ
           </Link>
-          <Dot />
-          <Link to="/menu" onClick={changePages()}>
+          <div style={styles.dot} />
+          <Link to="/menu" style={styles.link}>
             АССОРТИМЕНТ
           </Link>
-          <Dot />
-          <Link to="/about" onClick={changePages()}>
+          <div style={styles.dot} />
+          <Link to="/about" style={styles.link}>
             КОНТАКТЫ
           </Link>
         </div>
-      </div>
-      <div>
-        <div className="header__block">
-          <div className="header__left">
-            <button
-              type="button"
-              className="header__burger"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <div /> {/* This div use for make line in button */}
-              <div /> {/* This div use for make line in button */}
-              <div /> {/* This div use for make line in button */}
-            </button>
-            {/* Logo in Header, use button for transition on main page */}
-            <Link to="/">
-              <div className="logo__mobile">
-                <img loading="lazy" src="./img/logo.svg" alt="FISH FISH" />
-                <div>FISH FISH</div>
-              </div>
-            </Link>
-          </div>
-          {/* Icon basket and login/signup in account, don't realease, will be in future:) */}
-          <div className="icon__container">
-            {/* Link from React-router-dom from transition on any page */}
-            <Link to="/login">
-              <button>
-                <img
-                  loading="lazy"
-                  src="./img/user.svg"
-                  alt="Личный кабинет"
-                  className="icon__mobile"
-                />
-              </button>
-            </Link>
-            <Link to="/basket">
-              <button>
-                <img
-                  loading="lazy"
-                  src="./img/basket.svg"
-                  alt="Корзина"
-                  className="icon__mobile"
-                />
-              </button>
-            </Link>
-          </div>
+        {menuOpen && <div className="menu-backdrop" onClick={toggleMenu} />}
+        <div style={styles.alignItems}>
+          <button style={styles.buttonBurger} onClick={toggleMenu}>
+            <div style={styles.burgerBox} />
+            <div style={styles.burgerBox} />
+            <div style={styles.burgerBox} />
+          </button>
+          <Link to="/" style={styles.logo}>
+            <Logo />
+            <div>FISH FISH</div>
+          </Link>
         </div>
-      </div>
+        <div style={styles.blockButton}>
+          <User className="up" style={styles.svg} />
+          <Basket className="up" style={styles.svg} />
+        </div>
+      </header>
     </MediaQuery>
   );
 }

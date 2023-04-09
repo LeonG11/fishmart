@@ -1,58 +1,67 @@
 import MediaQuery from "react-responsive";
-import { Link } from "react-router-dom";
 import React from "react";
-import { Dot } from "./Dot";
+import { ReactComponent as Logo } from "../img/logo.svg";
+import { Dot } from "../Components/Dot";
+import { LinkNav } from "../Components/LinkNav";
+import { ReactComponent as User } from "../img/user.svg";
+import { ReactComponent as Basket } from "../img/basket.svg";
+import { Link } from "react-router-dom";
 
 export function DesktopNav() {
-  function getOnClick() {
-    return () => {
-      window.scrollTo(0, 0);
-    };
-  }
-
+  const styles = {
+    header: {
+      width: "auto",
+      height: "6.875rem",
+      backgroundColor: "#051B26",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
+    logo: {
+      marginLeft: "4rem",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      fontSize: "1.5rem",
+      color: "#B78A61",
+      fontWeight: "400",
+    },
+    blockLinks: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+    blockButton: {
+      marginRight: "60px",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
+    svg: {
+      marginRight: "2rem",
+    },
+  };
   return (
     <MediaQuery minWidth={768}>
-      <div className="header__block">
-        <Link to="/" className="header__block__a">
-          <div className="header__block__container">
-            <img loading="lazy" src="./img/logo.svg" alt="FISH FISH" />
-            <div>FISH FISH</div>
-          </div>
+      <header style={styles.header}>
+        <Link to="/" style={styles.logo}>
+          <Logo />
+          <div>FISH FISH</div>
         </Link>
-        <div className="nav__link">
-          <div className="flex items-center flex-row ml-auto mr-auto gap-[28px]">
-            <Link to="/fishfish" onClick={getOnClick()}>
-              <div className="fm">FISH FISH</div>
-            </Link>
-            <Dot />
-            <Link to="/menu" onClick={getOnClick()}>
-              <div className="fm">АССОРТИМЕНТ</div>
-            </Link>
-            <Dot />
-            <Link to="/about" onClick={getOnClick()}>
-              <div className="fm">КОНТАКТЫ</div>
-            </Link>
-          </div>
+        <div style={styles.blockLinks}>
+          <LinkNav links="/fishfish" text="FISH FISH" />
+          <Dot />
+          <LinkNav links="/menu" text="АССОРТИМЕНТ" />
+          <Dot />
+          <LinkNav links="/about" text="КОНТАКТЫ" />
         </div>
-        <div className="col-start-12 items-center flex justify-right">
-          <button className="fm">
-            <img
-              loading="lazy"
-              className="icon invert mr-7"
-              src="./img/user.svg"
-              alt=""
-            />
-          </button>
-          <button className="fm">
-            <img
-              loading="lazy"
-              className=" invert mr-7"
-              src="./img/basket.svg"
-              alt=""
-            />
-          </button>
+        <div style={styles.blockButton}>
+          <User className="up" style={styles.svg} />
+          <Basket className="up" style={styles.svg} />
         </div>
-      </div>
+      </header>
     </MediaQuery>
   );
 }
